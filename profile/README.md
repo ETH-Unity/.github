@@ -21,6 +21,8 @@ ETH-Unity develops tools that integrate Ethereum blockchain functionality into U
 
 ## Data Flow
 
+<img src="(https://github.com/ETH-Unity/.github/blob/1fc4a72141f8124512eef9966340ba0f488401fd/dataflow.png)" height="400">
+
 The following illustrates the core data flow between the components in a typical ETH-Unity WebGL environment integrated with blockchain and multiplayer support:
 
 **Game Initialization**  
