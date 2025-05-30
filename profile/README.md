@@ -21,9 +21,9 @@ ETH-Unity develops tools that integrate Ethereum blockchain functionality into U
 
 ## Data Flow
 
-<img src="https://github.com/ETH-Unity/.github/blob/1fc4a72141f8124512eef9966340ba0f488401fd/dataflow.png" height="400">
-
 The following illustrates the core data flow between the components in a typical ETH-Unity WebGL environment integrated with blockchain and multiplayer support:
+
+<img src="https://github.com/ETH-Unity/.github/blob/1fc4a72141f8124512eef9966340ba0f488401fd/dataflow.png" height="400">
 
 **Game Initialization**  
    - The user opens the WebGL game in their browser.
@@ -41,7 +41,7 @@ The following illustrates the core data flow between the components in a typical
 **Responses and Sync**  
    - The Ethereum node returns JSON-RPC responses, which are processed either directly by the WebGL client or relayed via the Unity server.
 
-This hybrid architecture enables seamless interaction between decentralized blockchain logic and real-time multiplayer gameplay in a browser-native Unity environment.
+This enables seamless interaction between decentralized blockchain logic and real-time multiplayer gameplay in a browser-native Unity environment.
 
 
 ## 📄 License
