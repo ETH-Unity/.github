@@ -1,55 +1,67 @@
 # ETH-Unity
 
-ETH-Unity develops tools that integrate Ethereum blockchain functionality into Unity-based multiplayer environments.
+**ETH-Unity** is a project that bridges Ethereum blockchain functionality with Unity-based multiplayer experiences. It enables decentralized interactions between users and simulated IoT devices in real-time multiplayer environments.
 
-## Projects
+## 🚀 Overview
 
--   **UnityNethereum**  
-    A Unity project combining multiplayer interactions (via Unity's Netcode for GameObjects) with Ethereum integration. It enables in-game wallet connections, Ether transactions, and smart contract interactions.
-    
--   **EthNetwork**  
-    Provides the blockchain backend for UnityNethereum, including a local GoQuorum testnet and smart contracts for user-to-user and user-to-device interactions.
-    
+ETH-Unity is composed of two main repositories:
 
-## Use Cases
+- [**ETH-WEB**](https://github.com/ETH-Unity/ETH-WEB): A Unity WebGL project that demonstrates multiplayer interactions powered by Ethereum smart contracts. It supports wallet connections, Ether transactions, and blockchain-driven gameplay mechanics in a client-server architecture using Unity Netcode for GameObjects.
 
--   In-game asset transfers using Ethereum.
-    
--   Access control for digital or physical spaces via smart contracts.
-    
--   Simulated IoT interactions (e.g., doors, sensors) within multiplayer environments.
+- [**EthNetwork**](https://github.com/ETH-Unity/EthNetwork): The blockchain infrastructure powering ETH-WEB. It includes a local GoQuorum Ethereum testnet, along with smart contracts designed for user-to-user and user-to-IoT device interactions.
 
-## Data Flow
+Together, these repositories create a seamless environment where blockchain logic enhances real-time multiplayer gameplay.
 
-The following illustrates the core data flow between the components in a typical ETH-Unity WebGL environment integrated with blockchain and multiplayer support:
+---
 
-<img src="https://github.com/ETH-Unity/.github/blob/1fc4a72141f8124512eef9966340ba0f488401fd/dataflow.png" height="400">
+## 🎮 Use Cases
 
-**Game Initialization**  
-   - The user opens the WebGL game in their browser.
-   - The Unity WebGL client makes an `HTTP GET` request to fetch assets (e.g., `/Build/Build.data`) from the client-side HTTP server.
-   - The server responds with the required game files, and the Unity game loads in the browser.
+- **In-Game Asset Transfers**  
+  Enable secure, on-chain message, document, currency or NFT transfers between players.
 
-**Multiplayer Connectivity**  
-   - The WebGL client establishes a WebSocket connection to the Unity multiplayer server.
-   - Real-time multiplayer synchronization is maintained over this WebSocket connection.
+- **Access Control via Smart Contracts**  
+  Control in-game or physical space access (e.g., doors, rooms, sensors) based on wallet ownership or contract conditions.
 
-**Blockchain Integration**  
-   - The Unity WebGL client may make JSON-RPC HTTP requests directly to an Ethereum node via the blockchain RPC endpoint (e.g., `eth_blockNumber`, `eth_getBalance`) to retrieve on-chain data.
-   - Optionally, the Unity server can also perform JSON-RPC requests to the blockchain if server-side blockchain logic is needed.
+- **IoT Device Simulation**  
+  Demonstrate blockchain-controlled IoT devices (like smart doors or lights) within a multiplayer game world.
 
-**Responses and Sync**  
-   - The Ethereum node returns JSON-RPC responses, which are processed either directly by the WebGL client or relayed via the Unity server.
+---
 
-This enables seamless interaction between decentralized blockchain logic and real-time multiplayer gameplay in a browser-native Unity environment.
+## 🔁 System Architecture
 
+<img src="https://github.com/ETH-Unity/.github/blob/1fc4a72141f8124512eef9966340ba0f488401fd/dataflow.png" height="400" alt="Data Flow Diagram">
+
+### 1. Game Initialization
+- A user opens the WebGL game in their browser.
+- The game assets (e.g., `.data`, `.wasm`, `.js`) are fetched from a static HTTP server.
+
+### 2. Multiplayer Connectivity
+- The WebGL client connects to a Unity-hosted multiplayer server via WebSockets.
+- Unity Netcode synchronizes player actions and state across all connected clients.
+
+### 3. Blockchain Integration
+- The WebGL client (or Unity server) sends JSON-RPC requests to the Ethereum node via the provided RPC endpoint.
+- Example calls: `eth_blockNumber`, `eth_getBalance`, or smart contract methods.
+
+### 4. Response Handling
+- Blockchain responses are processed directly by the WebGL client or routed through the Unity server for game logic synchronization.
+
+---
+
+## 📦 Repositories
+
+| Repository | Description |
+|------------|-------------|
+| [**ETH-WEB**](https://github.com/ETH-Unity/ETH-WEB) | Unity WebGL project demonstrating Ethereum integration in a multiplayer environment. |
+| [**EthNetwork**](https://github.com/ETH-Unity/EthNetwork) | Blockchain backend with GoQuorum testnet and custom smart contracts for user/device interactions. |
+
+---
+
+## 🛠️ Contributing
+
+We welcome contributions from anyone! Whether you're a developer, designer, tester, or just interested in experimenting with Ethereum + Unity, you're encouraged to open issues, suggest features, or submit pull requests.
 
 ## 📄 License
 
 All projects are under the MIT License.
 
-## 🔗 Repositories
-
--   [UnityNethereum](https://github.com/ETH-Unity/UnityNethereum)
-    
--   [EthNetwork](https://github.com/ETH-Unity/EthNetwork)
