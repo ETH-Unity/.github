@@ -1,6 +1,6 @@
 # ETH-Unity
 
-**ETH-Unity** is a project that bridges Ethereum blockchain functionality with Unity-based multiplayer experiences. It enables decentralized interactions between users and simulated IoT devices in real-time multiplayer environments.
+**ETH-Unity** is a proof of concept project that bridges Ethereum blockchain functionality with Unity-based multiplayer experiences. It enables decentralized interactions between users and simulated IoT devices in real-time multiplayer environments.
 
 ## 🚀 Overview
 
@@ -16,7 +16,7 @@ Together, these repositories create a seamless environment where blockchain logi
 
 ## 🎮 Use Cases
 
-- **In-Game Asset Transfers**  
+- **Asset Transfers**  
   Enable secure, on-chain message, document, currency or NFT transfers between players.
 
 - **Access Control via Smart Contracts**  
@@ -29,11 +29,9 @@ Together, these repositories create a seamless environment where blockchain logi
 
 ## 🔁 System Architecture
 
-<img src="https://github.com/ETH-Unity/.github/blob/1fc4a72141f8124512eef9966340ba0f488401fd/dataflow.png" height="400" alt="Data Flow Diagram">
-
-### 1. Game Initialization
-- A user opens the WebGL game in their browser.
-- The game assets (e.g., `.data`, `.wasm`, `.js`) are fetched from a static HTTP server.
+### 1. Initialization
+- A user opens the WebGL client in their browser.
+- The assets (e.g., `.data`, `.wasm`, `.js`) are fetched from a static HTTP server.
 
 ### 2. Multiplayer Connectivity
 - The WebGL client connects to a Unity-hosted multiplayer server via WebSockets.
@@ -44,7 +42,7 @@ Together, these repositories create a seamless environment where blockchain logi
 - Example calls: `eth_blockNumber`, `eth_getBalance`, or smart contract methods.
 
 ### 4. Response Handling
-- Blockchain responses are processed directly by the WebGL client or routed through the Unity server for game logic synchronization.
+- Blockchain responses are processed directly by the WebGL client or routed through the Unity server for logic synchronization.
 
 ---
 
@@ -56,10 +54,6 @@ Together, these repositories create a seamless environment where blockchain logi
 | [**EthNetwork**](https://github.com/ETH-Unity/EthNetwork) | Blockchain backend with GoQuorum testnet and custom smart contracts for user/device interactions. |
 
 ---
-
-## 🛠️ Contributing
-
-We welcome contributions from anyone! Whether you're a developer, designer, tester, or just interested in experimenting with Ethereum + Unity, you're encouraged to open issues, suggest features, or submit pull requests.
 
 ## 📄 License
 
